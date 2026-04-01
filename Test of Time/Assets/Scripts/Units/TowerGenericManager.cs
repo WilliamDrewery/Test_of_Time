@@ -6,7 +6,9 @@ public class TowerGenericManager : MonoBehaviour
     private Transform target;
     public float damage;
     public float attackSpeed;
+    public float attackCooldown;
     public float cost;
+    public GameObject bulletPrefab;
     [SerializeField] public LayerMask enemyMask;
     void Start()
     {
@@ -23,6 +25,22 @@ public class TowerGenericManager : MonoBehaviour
         }
 
         AimAtTarget();
+        if (!TargetInRange())
+        {
+            target = null;
+        }
+        else
+        {
+            attackCooldown += Time.deltaTime;
+            if (attackCooldown >= 1f / attackSpeed)
+            {
+                GameObject bullet=Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+                BulletBehaviourDefault bulletScript=bullet.GetComponent<BulletBehaviourDefault>();
+                bulletScript.SetTarget(target);
+                attackCooldown = 0f; 
+            }
+        }
+
     }
     private void FindTarget()
     {
@@ -37,6 +55,10 @@ public class TowerGenericManager : MonoBehaviour
         float angle = Mathf.Atan2(target.position.y - transform.position.y, target.position.x - transform.position.x) * Mathf.Rad2Deg;
         Quaternion targetRotation = Quaternion.Euler(new Vector3(0f, 0f, angle));
         transform.rotation = targetRotation;
+    }
+    private bool TargetInRange()
+    {
+        return Vector2.Distance(target.position, transform.position) <= range;
     }
 
 }
