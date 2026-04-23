@@ -4,7 +4,7 @@ public class BulletBehaviourDefault : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D bulletRB;
     [SerializeField] private float bulletSpeed = 5f;
-    private Transform target;
+    private Vector3 target;
     void Start()
     {
         
@@ -13,11 +13,12 @@ public class BulletBehaviourDefault : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (!target) return;
-        Vector2 direction=(target.position - transform.position).normalized;
+        
+        Vector2 direction=(target - transform.position).normalized;
         bulletRB.linearVelocity= direction*bulletSpeed;
+        if (target == null) return;
     }
-    public void SetTarget(Transform bulletTarget)
+    public void SetTarget(Vector3 bulletTarget)
     {
         target = bulletTarget;
     }

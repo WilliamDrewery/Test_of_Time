@@ -36,7 +36,7 @@ public class TowerGenericManager : MonoBehaviour
             {
                 GameObject bullet=Instantiate(bulletPrefab, transform.position, Quaternion.identity);
                 BulletBehaviourDefault bulletScript=bullet.GetComponent<BulletBehaviourDefault>();
-                bulletScript.SetTarget(target);
+                bulletScript.SetTarget(target.position);
                 attackCooldown = 0f; 
             }
         }
