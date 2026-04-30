@@ -1,4 +1,4 @@
-using UnityEngine;
+   using UnityEngine;
 
 public class BulletBehaviourDefault : MonoBehaviour
 {
@@ -24,7 +24,11 @@ public class BulletBehaviourDefault : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        //hurt enemy
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            
+            collision.gameObject.GetComponent<EnemyMovement>().health-=1;
+        }
         Destroy(gameObject);
     }
 }
