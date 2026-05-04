@@ -165,5 +165,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa31258e3be6aa74387e7d34fe2195c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  path:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  spawnManager: {fileID: 0}
   speed: 5
   health: 2
+  spawnOne: 0
+  spawnTwo: 0
+  spawnThree: 0
+  spawnFour: 0

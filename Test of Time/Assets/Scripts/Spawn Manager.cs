@@ -30,16 +30,33 @@ public class SpawnManager : MonoBehaviour
         {
             SpawnEnemy();
             yield return new WaitForSeconds(spawnInterval);
-                
         }
     }
 
     public void SpawnEnemy()
     {
         int spawnPoint = Random.Range(0, spawnPoints.Length);
+        GameObject enemy = Instantiate(enemyPrefab, spawnPoints[spawnPoint].position, Quaternion.identity);
 
-        Instantiate(enemyPrefab, spawnPoints[spawnPoint].position, Quaternion.identity);
+        if(spawnPoint == 0)
+        {
+            enemy.GetComponent<EnemyMovement>().spawnOne = true;
+        }
 
+        if (spawnPoint == 1)
+        {
+            enemy.GetComponent<EnemyMovement>().spawnTwo = true;
+        }
+
+        if (spawnPoint == 2)
+        {
+            enemy.GetComponent<EnemyMovement>().spawnThree = true;
+        }
+
+        if (spawnPoint == 3)
+        {
+            enemy.GetComponent<EnemyMovement>().spawnFour = true;
+        }
     }
 
 }
