@@ -10,9 +10,11 @@ public class TowerGenericManager : MonoBehaviour
     public float cost;
     public GameObject bulletPrefab;
     [SerializeField] public LayerMask enemyMask;
+    private GameObject cannon;
+    
     void Start()
     {
-        
+        cannon = transform.GetChild(0).gameObject;
     }
 
     // Update is called once per frame
@@ -54,7 +56,8 @@ public class TowerGenericManager : MonoBehaviour
     {
         float angle = Mathf.Atan2(target.position.y - transform.position.y, target.position.x - transform.position.x) * Mathf.Rad2Deg;
         Quaternion targetRotation = Quaternion.Euler(new Vector3(0f, 0f, angle));
-        transform.rotation = targetRotation;
+        // Tower and cannon sprites are separate; rotate cannon while keeping the base object stationary
+        cannon.transform.rotation = targetRotation;
     }
     private bool TargetInRange()
     {
