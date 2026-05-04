@@ -80,7 +80,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: e1355889bc8b8e748bb947d5d29ebae8, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -170,10 +170,13 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  spawnManager: {fileID: 0}
   speed: 5
   health: 2
   spawnOne: 0
   spawnTwo: 0
   spawnThree: 0
   spawnFour: 0
+  spr_idle: {fileID: -168082024, guid: b28e6c23ca38f7103b650df2c990ac75, type: 3}
+  spr_walk_1: {fileID: -1957415229, guid: b28e6c23ca38f7103b650df2c990ac75, type: 3}
+  spr_walk_2: {fileID: -1315825914, guid: b28e6c23ca38f7103b650df2c990ac75, type: 3}
+  animationSpeed: 6

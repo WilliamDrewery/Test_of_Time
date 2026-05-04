@@ -193,7 +193,7 @@ MonoBehaviour:
   attackSpeed: 1
   attackCooldown: 0
   cost: 100
-  bulletPrefab: {fileID: 0}
+  bulletPrefab: {fileID: 316492615780505029, guid: cebb2f33b8b0b194d9865da5c7de38e9, type: 3}
   enemyMask:
     serializedVersion: 2
     m_Bits: 1024
