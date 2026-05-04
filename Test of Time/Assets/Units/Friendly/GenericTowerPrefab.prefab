@@ -26,8 +26,8 @@ Transform:
   m_GameObject: {fileID: 650682955136920422}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.54, y: 0, z: 0}
-  m_LocalScale: {x: 0.8465, y: 0.3121, z: 1}
+  m_LocalPosition: {x: 0.011, y: 0, z: 0}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 289259835755713552}
@@ -97,7 +97,6 @@ GameObject:
   m_Component:
   - component: {fileID: 289259835755713552}
   - component: {fileID: 1076493736786703711}
-  - component: {fileID: -9146525239935167044}
   m_Layer: 0
   m_Name: GenericTowerPrefab
   m_TagString: Untagged
@@ -176,22 +175,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-9146525239935167044
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7141138300249440593}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69eadf14995891d4da43ad50688e216c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  range: 10
-  damage: 10
-  attackSpeed: 1
-  cost: 100
-  enemyMask:
-    serializedVersion: 2
-    m_Bits: 1024
