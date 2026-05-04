@@ -5360,7 +5360,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: e1355889bc8b8e748bb947d5d29ebae8, type: 3}
+  m_Sprite: {fileID: 1159855421, guid: b28e6c23ca38f7103b650df2c990ac75, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -5399,6 +5399,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  spr_idle: {fileID: 1159855421, guid: b28e6c23ca38f7103b650df2c990ac75, type: 3}
+  spr_walk1: {fileID: -1595839515, guid: b28e6c23ca38f7103b650df2c990ac75, type: 3}
+  spr_walk2: {fileID: 817615302, guid: b28e6c23ca38f7103b650df2c990ac75, type: 3}
+  animationSpeed: 7
 --- !u!1 &1755563684
 GameObject:
   m_ObjectHideFlags: 0
