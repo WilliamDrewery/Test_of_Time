@@ -33,7 +33,7 @@ public class TowerMeleeManager : MonoBehaviour
             attackCooldown += Time.deltaTime;
             if (attackCooldown >= 1f / attackSpeed)
             {
-                target.gameObject.GetComponent<EnemyMovement>().health-=1; 
+                target.gameObject.GetComponent<EnemyMovement>().health-=damage; 
             }
         }
 

@@ -129,8 +129,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3619ea8dffd56ee4ca617c604afb5cac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 1
-  damage: 15
+  range: 2
+  damage: 2.5
   attackSpeed: 1
   attackCooldown: 1
   cost: 50

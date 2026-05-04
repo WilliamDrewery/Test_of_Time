@@ -38,6 +38,7 @@ public class TowerGenericManager : MonoBehaviour
                 BulletBehaviourDefault bulletScript=bullet.GetComponent<BulletBehaviourDefault>();
                 bulletScript.SetTarget(target.position);
                 attackCooldown = 0f; 
+                bullet.GetComponent<BulletBehaviourDefault>().bulletDamage=damage;
             }
         }
 

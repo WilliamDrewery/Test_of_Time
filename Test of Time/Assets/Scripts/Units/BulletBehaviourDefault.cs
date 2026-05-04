@@ -4,7 +4,8 @@ public class BulletBehaviourDefault : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D bulletRB;
     [SerializeField] private float bulletSpeed = 5f;
-    private Vector3 target;
+    public Vector2 target;
+    public float bulletDamage;
     void Start()
     {
         
@@ -14,9 +15,11 @@ public class BulletBehaviourDefault : MonoBehaviour
     void FixedUpdate()
     {
         
-        Vector2 direction=(target - transform.position).normalized;
+        Vector2 direction=(target - (Vector2)transform.position).normalized;
         bulletRB.linearVelocity= direction*bulletSpeed;
-        if (target == null) return;
+        if ((Mathf.Round(bulletRB.position.x), Mathf.Round(bulletRB.position.y))==(Mathf.Round(target.x), Mathf.Round(target.y))){
+            Destroy(gameObject);
+        }
     }
     public void SetTarget(Vector3 bulletTarget)
     {
@@ -27,7 +30,7 @@ public class BulletBehaviourDefault : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy"))
         {
             
-            collision.gameObject.GetComponent<EnemyMovement>().health-=1;
+            collision.gameObject.GetComponent<EnemyMovement>().health-=bulletDamage;
         }
         Destroy(gameObject);
     }
