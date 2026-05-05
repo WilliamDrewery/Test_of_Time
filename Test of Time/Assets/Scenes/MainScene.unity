@@ -5399,9 +5399,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  spr_idle: {fileID: 1159855421, guid: b28e6c23ca38f7103b650df2c990ac75, type: 3}
-  spr_walk1: {fileID: -1595839515, guid: b28e6c23ca38f7103b650df2c990ac75, type: 3}
-  spr_walk2: {fileID: 817615302, guid: b28e6c23ca38f7103b650df2c990ac75, type: 3}
+  spr_idle: {fileID: 1418177468, guid: b28e6c23ca38f7103b650df2c990ac75, type: 3}
+  spr_walk1: {fileID: -195522143, guid: b28e6c23ca38f7103b650df2c990ac75, type: 3}
+  spr_walk2: {fileID: 733852959, guid: b28e6c23ca38f7103b650df2c990ac75, type: 3}
   animationSpeed: 7
 --- !u!1 &1755563684
 GameObject:
