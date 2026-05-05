@@ -32,12 +32,12 @@ public class EnemyMovement : MonoBehaviour
 
         if (spawnThree)
         {
-            transform.position = Vector2.MoveTowards(transform.position, path[1].transform.position, speed * Time.deltaTime);
+            transform.position = Vector2.MoveTowards(transform.position, path[0].transform.position, speed * Time.deltaTime);
         }
 
         if (spawnFour)
         {
-            transform.position = Vector2.MoveTowards(transform.position, path[0].transform.position, speed * Time.deltaTime);
+            transform.position = Vector2.MoveTowards(transform.position, path[1].transform.position, speed * Time.deltaTime);
         }
 
         else
