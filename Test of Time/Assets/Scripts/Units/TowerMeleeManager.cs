@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class TowerGenericManager : MonoBehaviour
+public class TowerMeleeManager : MonoBehaviour
 {
     public float range;
     private Transform target;
@@ -8,13 +8,10 @@ public class TowerGenericManager : MonoBehaviour
     public float attackSpeed;
     public float attackCooldown;
     public float cost;
-    public GameObject bulletPrefab;
     [SerializeField] public LayerMask enemyMask;
-    private GameObject cannon;
-    
     void Start()
     {
-        cannon = transform.GetChild(0).gameObject;
+        
     }
 
     // Update is called once per frame
@@ -36,11 +33,7 @@ public class TowerGenericManager : MonoBehaviour
             attackCooldown += Time.deltaTime;
             if (attackCooldown >= 1f / attackSpeed)
             {
-                GameObject bullet=Instantiate(bulletPrefab, transform.position, Quaternion.identity);
-                BulletBehaviourDefault bulletScript=bullet.GetComponent<BulletBehaviourDefault>();
-                bulletScript.SetTarget(target.position);
-                attackCooldown = 0f; 
-                bullet.GetComponent<BulletBehaviourDefault>().bulletDamage=damage;
+                target.gameObject.GetComponent<EnemyMovement>().health-=damage; 
             }
         }
 
@@ -57,8 +50,7 @@ public class TowerGenericManager : MonoBehaviour
     {
         float angle = Mathf.Atan2(target.position.y - transform.position.y, target.position.x - transform.position.x) * Mathf.Rad2Deg;
         Quaternion targetRotation = Quaternion.Euler(new Vector3(0f, 0f, angle));
-        // Tower and cannon sprites are separate; rotate cannon while keeping the base object stationary
-        cannon.transform.rotation = targetRotation;
+        transform.rotation = targetRotation;
     }
     private bool TargetInRange()
     {
