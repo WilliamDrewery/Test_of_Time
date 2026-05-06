@@ -79,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -4889991539295429384, guid: 723903ac40038ad40ab6714bdbff924c, type: 3}
+  m_Sprite: {fileID: 1310973031, guid: 723903ac40038ad40ab6714bdbff924c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -170,13 +170,13 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  speed: 10
-  health: 2500
+  speed: 1.5
+  health: 50
   spawnOne: 0
   spawnTwo: 0
   spawnThree: 0
   spawnFour: 0
-  spr_idle: {fileID: -4889991539295429384, guid: 723903ac40038ad40ab6714bdbff924c, type: 3}
-  spr_walk_1: {fileID: -1369115473895504293, guid: 723903ac40038ad40ab6714bdbff924c, type: 3}
-  spr_walk_2: {fileID: -1979148364, guid: 723903ac40038ad40ab6714bdbff924c, type: 3}
+  spr_idle: {fileID: 1310973031, guid: 723903ac40038ad40ab6714bdbff924c, type: 3}
+  spr_walk_1: {fileID: 1810139849, guid: 723903ac40038ad40ab6714bdbff924c, type: 3}
+  spr_walk_2: {fileID: -1445091421, guid: 723903ac40038ad40ab6714bdbff924c, type: 3}
   animationSpeed: 6
