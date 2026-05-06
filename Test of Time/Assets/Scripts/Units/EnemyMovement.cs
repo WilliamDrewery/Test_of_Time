@@ -10,40 +10,40 @@ public class EnemyMovement : MonoBehaviour
     public bool spawnTwo;
     public bool spawnThree;
     public bool spawnFour;
+    
+    public Sprite spr_idle;
+    public Sprite spr_walk_1;
+    public Sprite spr_walk_2;
+    public float animationSpeed = 6;
+
+    private int spawnNumber;
+    private SpriteRenderer renderer;
+    private float animationSalt;
+
+    
     void Start()
     {
         baseTransform = GameObject.FindGameObjectWithTag("Base").transform;
         path = GameObject.FindGameObjectsWithTag("Path");
+        
+        spawnNumber = spawnFour ? 0 : spawnThree ? 1 : spawnTwo ? 2 : spawnOne ? 3 : -1;
+
+        renderer = GetComponent<SpriteRenderer>();
+        animationSalt = Random.Range(0f, 1f);
     }
 
     // Update is called once per frame
     void Update()
     {
 
-        if (spawnOne)
-        {
-            transform.position = Vector2.MoveTowards(transform.position, path[2].transform.position, speed * Time.deltaTime);
-        }
+        Vector3 targetPosition = spawnNumber == -1 ? baseTransform.position : path[spawnNumber].transform.position;
 
-        if (spawnTwo)
-        {
-            transform.position = Vector2.MoveTowards(transform.position, path[0].transform.position, speed * Time.deltaTime);
-        }
+        transform.position = Vector2.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
+        float angle = Vector2.Angle(transform.position, targetPosition) + 90;
+        Quaternion targetRotation = Quaternion.Euler(new Vector3(0f, 0f, angle));
+        transform.rotation = targetRotation;
 
-        if (spawnThree)
-        {
-            transform.position = Vector2.MoveTowards(transform.position, path[3].transform.position, speed * Time.deltaTime);
-        }
-
-        if (spawnFour)
-        {
-            transform.position = Vector2.MoveTowards(transform.position, path[1].transform.position, speed * Time.deltaTime);
-        }
-
-        else
-        {
-            transform.position = Vector2.MoveTowards(transform.position, baseTransform.position, speed * Time.deltaTime);
-        }
+        renderer.sprite = (Time.time * animationSpeed + animationSalt) % 2 < 1 ? spr_walk_1 : spr_walk_2;
         
 
         if (health <= 0)
