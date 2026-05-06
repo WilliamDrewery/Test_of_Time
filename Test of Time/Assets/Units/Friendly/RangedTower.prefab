@@ -17,6 +17,14 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 289259835755713552, guid: 0462e5ebf70ff96438b544fe4faedfc4, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 289259835755713552, guid: 0462e5ebf70ff96438b544fe4faedfc4, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 289259835755713552, guid: 0462e5ebf70ff96438b544fe4faedfc4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -56,21 +64,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1076493736786703711, guid: 0462e5ebf70ff96438b544fe4faedfc4, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a9a23bc7492ece947885da92825a7e10, type: 3}
+    - target: {fileID: 3386126495201211385, guid: 0462e5ebf70ff96438b544fe4faedfc4, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: dd9f011729b167043b051c2ce1067972, type: 3}
     - target: {fileID: 7141138300249440593, guid: 0462e5ebf70ff96438b544fe4faedfc4, type: 3}
       propertyPath: m_Name
       value: RangedTower
       objectReference: {fileID: 0}
     - target: {fileID: 7922327553863010761, guid: 0462e5ebf70ff96438b544fe4faedfc4, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.76332
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 7922327553863010761, guid: 0462e5ebf70ff96438b544fe4faedfc4, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.263332
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 7922327553863010761, guid: 0462e5ebf70ff96438b544fe4faedfc4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.032
+      value: 0.477
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -10,7 +10,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 289259835755713552, guid: 0462e5ebf70ff96438b544fe4faedfc4, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.5
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 289259835755713552, guid: 0462e5ebf70ff96438b544fe4faedfc4, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 289259835755713552, guid: 0462e5ebf70ff96438b544fe4faedfc4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -52,17 +56,49 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1076493736786703711, guid: 0462e5ebf70ff96438b544fe4faedfc4, type: 3}
+      propertyPath: m_Size.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1076493736786703711, guid: 0462e5ebf70ff96438b544fe4faedfc4, type: 3}
+      propertyPath: m_Size.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1076493736786703711, guid: 0462e5ebf70ff96438b544fe4faedfc4, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 0637945f976810f42a4d22d0c27acf97, type: 3}
+    - target: {fileID: 1076493736786703711, guid: 0462e5ebf70ff96438b544fe4faedfc4, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3386126495201211385, guid: 0462e5ebf70ff96438b544fe4faedfc4, type: 3}
+      propertyPath: m_Size.x
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3386126495201211385, guid: 0462e5ebf70ff96438b544fe4faedfc4, type: 3}
+      propertyPath: m_Size.y
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 3386126495201211385, guid: 0462e5ebf70ff96438b544fe4faedfc4, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3386126495201211385, guid: 0462e5ebf70ff96438b544fe4faedfc4, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7141138300249440593, guid: 0462e5ebf70ff96438b544fe4faedfc4, type: 3}
       propertyPath: m_Name
       value: CavalryTower
       objectReference: {fileID: 0}
     - target: {fileID: 7922327553863010761, guid: 0462e5ebf70ff96438b544fe4faedfc4, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.18111481
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7922327553863010761, guid: 0462e5ebf70ff96438b544fe4faedfc4, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.71782994
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7922327553863010761, guid: 0462e5ebf70ff96438b544fe4faedfc4, type: 3}
       propertyPath: m_LocalPosition.x

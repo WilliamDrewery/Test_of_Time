@@ -36,7 +36,7 @@ public class TowerGenericManager : MonoBehaviour
             attackCooldown += Time.deltaTime;
             if (attackCooldown >= 1f / attackSpeed)
             {
-                GameObject bullet=Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+                GameObject bullet=Instantiate(bulletPrefab, transform.position, cannon.transform.rotation);
                 BulletBehaviourDefault bulletScript=bullet.GetComponent<BulletBehaviourDefault>();
                 bulletScript.SetTarget(target.position);
                 attackCooldown = 0f; 
