@@ -33,7 +33,7 @@ public class EnemyMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        spawnNumber = spawnFour ? 0 : spawnThree ? 1 : spawnTwo ? 2 : spawnOne ? 3 : -1;
+        spawnNumber = spawnFour ? 1 : spawnThree ? 3 : spawnTwo ? 0 : spawnOne ? 2 : -1;
         Vector3 targetPosition = spawnNumber == -1 ? baseTransform.position : path[spawnNumber].transform.position;
 
         transform.position = Vector2.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
